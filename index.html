@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <style>
+        td {
+            font-size: 80px;
+            background-color: rgb(65, 177, 42);
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+        td:hover {
+            background-color: rgb(157, 235, 150);
+            cursor:pointer;
+        }
+
+        button {
+            background-color: hsl(54, 90%, 49%);
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+    <body>
+        <h1>
+            Jogo da Velha
+        </h1>
+        <table> 
+            <tr>
+                <td id="TD1" onclick="marcar(this)"></td>
+                <td id="TD2" onclick="marcar(this)"></td>
+                <td id="TD3" onclick="marcar(this)"></td>
+            </tr>   
+            <tr>
+                <td id="TD4" onclick="marcar(this)"></td>
+                <td id="TD5" onclick="marcar(this)"></td>
+                <td id="TD6" onclick="marcar(this)"></td>
+            </tr>   
+            <tr>
+                <td id="TD7" onclick="marcar(this)"></td>
+                <td id="TD8" onclick="marcar(this)"></td>
+                <td id="TD9" onclick="marcar(this)"></td>
+            </tr>
+        </table>
+        <button>
+            <a href="index.html">Reiniciar</a>
+        </button>
+        <script>
+            var jogador = "X"
+
+            function marcar(td)
+            {
+                if(td.innerHTML) return
+                td.innerHTML = jogador
+                if(jogador == "X"){
+                    jogador = "O"
+                } else{
+                    jogador = "X"
+                }
+            }
+
+           
+            
+        </script>
+    </body>
+</html>
